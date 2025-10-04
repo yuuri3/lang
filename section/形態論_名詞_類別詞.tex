@@ -1,82 +1,88 @@
 \langname の名詞は、指示詞や数詞と共起する際に、必ず特定の類別詞（classifier）を伴う。
 以下のリストは、本言語の主要な類別詞をまとめたものであるが、完全なものではない。
 % TODO : 完全なリストを構築
-
-% TODO : 類別詞を接辞から独立した語にする。
-% TODO : exe環境仕様
 \begin{itemize}
     \item \textbf{動物}\\
     人間や動物を表す類別詞は最も数が多い。
     % 具体的な割合
         \begin{itemize}
             \item \textbf{api}: 人間を指す。
-                \begin{itemize}
-                    \item \texttt{uevo api} (子供 CLF.人間)
-                    \quad 「一人の子供」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll uevo api \\
+                        child CLF.human \\
+                        \glt 子供
+                \end{exe}
             \item \textbf{mu}: 四足歩行の動物を指す。
-                \begin{itemize}
-                    \item \texttt{tui mu} (犬 CLF.動物)
-                    \quad 「犬」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll tui mu \\
+                        dog CLF.animal \\
+                        \glt 犬
+                \end{exe}
             \item \textbf{aupi}: 鳥、爬虫類、樹木などを指す。
-                \begin{itemize}
-                    \item \texttt{paiere auti} (カエル CLF.鳥) 
-                    \quad 「カエル」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll paiere auti \\
+                        flog CLF.bird \\
+                        \glt カエル
+                \end{exe}
             \item \textbf{iatiri}: 魚を指す。
-                \begin{itemize}
-                    \item \texttt{piaipiai iatiri} (魚-CLF.魚)
-                    \quad 「魚の一種」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll piaipiai iatiri \\
+                        fisf.sp CLF.fish \\ % TODO : 種類
+                        \glt 魚の一種
+                \end{exe}
         \end{itemize}
     \item \textbf{植物}
         \begin{itemize}
             \item \textbf{ati}: 草を指す。
-                \begin{itemize}
-                    \item \texttt{tuta ati} (草-CLF.草) 
-                    \quad 「草の一種」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll tuta ati \\
+                        glass.sp CLF.plant \\ % TODO : 種類
+                        \glt 草の一種
+                \end{exe}
             \item \textbf{ane}: 食べられる草を指す。
-                \begin{itemize}
-                    \item \texttt{pipota ane} (草-CLF.食べられる草)
-                    \quad 「ヤム芋」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll piota ane \\
+                        yam CLF.edible \\
+                        \glt ヤム芋
+                \end{exe}
         \end{itemize}
     \item \textbf{名詞の形状・性質}
         \begin{itemize}
             \item \textbf{ki}: 丸いものを指す。
-                \begin{itemize}
-                    \item \texttt{pipoa ki} (サゴ-CLF.丸いもの)
-                    \quad 「サゴの実」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll pipoa ki \\
+                        sago CLF.ball \\
+                        \glt サゴの実
+                \end{exe}
             \item \textbf{a}: 細長いものや道具を指す。
-                \begin{itemize}
-                    \item \texttt{reapi a} (槍-CLF.細長いもの)
-                    \quad 「一本の槍」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll reapi a \\
+                        spear CLF.long \\
+                        \glt 一本の槍
+                \end{exe}
             \item \textbf{kuai}: 束や集団を指す。
-                \begin{itemize}
-                    \item \texttt{reapi kuai} (槍-CLF.集団)
-                    \quad 「一つの群れ」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll reapi kuai \\
+                        spear CLF.bunch \\
+                        \glt 槍の束
+                \end{exe}
             \item \textbf{piti}: 薄いものや曲がっているものを指す。
-                \begin{itemize}
-                    \item \texttt{pipoa piti} (サゴ-CLF.薄いもの)
-                    \quad 「サゴの葉」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll pipoa piti \\
+                        sago CLF.membrane \\
+                        \glt サゴの葉
+                \end{exe}
             \item \textbf{pai}: 粉や食べられるものを指す。
-                \begin{itemize}
-                    \item \texttt{pipoa pai} (サゴ-CLF.粉)
-                    \quad 「サゴの粉」
-                \end{itemize}
+                \begin{exe}
+                    \ex \gll pipoa pai \\
+                        sago CLF.flour \\
+                        \glt サゴの粉
+                \end{exe}
         \end{itemize}
 \end{itemize}
 これらの類別詞は、名詞句において数詞や指示詞の直後に付加される接尾辞として機能する。
-% TODO : 接尾辞→独立した語
 
 以下の節でその機能を列挙する。
-% TODO : 以下の内容は統語論に移動
 
 \paragraph{一般名詞の代替}
 類別詞は、特定の範疇全体を指す名詞として機能する。
