@@ -21,9 +21,13 @@
 
 \def\langname{Kaupapa語}
 
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4} 
+\setcounter{tocdepth}{4}
 
 \captionsetup[table]{labelsep=period, labelfont=bf, justification=raggedright, singlelinecheck=off}
 
-\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{}{0pt}{}
-\titlespacing{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em} % デフォルト値（ぶら下がり）
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{0pt}{}
+\titlespacing{\paragraph}{0pt}{1.5ex plus 1ex minus .2ex}{0em}
+
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{0pt}{}
+\titlespacing{\subparagraph}{0pt}{1.5ex plus 1ex minus .2ex}{0em}
