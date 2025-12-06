@@ -1,20 +1,3 @@
-% \setcounter{secnumdepth}{5}  
-% \usepackage{leipzig}
-% \usepackage{gb4e}
-% \noautomath
-% \usepackage{tipa}
-% \usepackage{here}
-% \usepackage[dvipdfmx]{graphicx}
-% \usepackage{multirow}
-% \usepackage{longtable}
-% \usepackage{diagbox}
-% \usepackage{ifthen}
-% \usepackage{xstring} % xstringパッケージを使用
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1]{fontenc}
-% \usepackage{lexikon}
-% \usepackage{threeparttable}
-% \usepackage{caption}
 \setcounter{secnumdepth}{5}
 \usepackage{leipzig}
 \usepackage{gb4e}
@@ -30,111 +13,25 @@
 \usepackage{lexikon}
 \usepackage{threeparttable}
 \usepackage{caption}
-% \usepackage{zxjfont}
 \usepackage{booktabs}
 \usepackage{hyperref}
-
-% 文字列strの中のstr1をstr2に置き換えるマクロ
-\newcommand{\changestr}[3]{%
-  \StrSubstitute{#1}{#2}{#3}[\Result]%
-  \Result
-}
-
+\usepackage{titlesec}
+ 
 \setlength{\parindent}{0pt}
-\makeglossaries
-\newleipzig{red}{red}{reduplication}
-\newleipzig{indef}{indef}{indefinite}
-\newleipzig{mov}{mov}{movement case}
-\newleipzig{inter}{inter}{interrogative}
-\newleipzig{cl}{cl}{class}
-\newleipzig{inch}{inch}{inchoative}
-%\newleipzig{prog}{prog}{progressive}
+ 
+\def\langname{Vuhura語}
 
-\makeatletter
-\newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}%
-  {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-  {.1\Cvs \@plus.3\Cdp}%
-  {\reset@font\sffamily\normalsize}
-}
-\makeatother
-\setcounter{secnumdepth}{4}
-
-\makeatletter
-\newcommand{\subsubsubsubsection}{\@startsection{subparagraph}{5}{\z@}%
-  {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-  {.1\Cvs \@plus.3\Cdp}%
-  {\reset@font\sffamily\normalsize}
-}
-\makeatother
-\setcounter{secnumdepth}{5}
-
-\def\langname{Kaapi語}
-\def\P{\textipa{P}}
-\def\E{\textipa{E}}
-\def\O{\textipa{O}}
-\def\I{\textipa{I}}
-\def\U{\textipa{U}}
-
-%\newcommand{\mylang}[1]{\'#1}
-
-%------------------------
-\makeatletter
-%
-\newcommand{\ZenbuOnpu}[1]{%
-\@tfor\moji:=#1\do{\moji♪}
-}
-%
-\newcommand{\BadExample}[1]{%
-\@tfor\moji:={#1}\do{\moji♪}
-}
-%
-
-
-\newcommand{\mylang}[1]{%
-\@tfor\moji:=#1\do%
-{%
-  \myletter{\moji}%
-}%
-}%
-
-\newcommand{\mydict}[2]{%
-  \begin{supertabular}[l]{ll}%
-    \multicolumn{2}{l}{\textbf{#1}}\\%
-    \,\,\,\,\,\, & #2%
-    \\%
-  \end{supertabular}%
-}%
-\newcommand{\dictsection}[1]{%
-{\Large\textbf{#1}}%
-\addcontentsline{toc}{subsection}{#1}%
-\,\\
-\,\\
-}%
-
-
-
-\makeatother
-
-%------------------------
-
-%たとえば、「りおれうす」をこのコマンドに入れると、
-%\ZenbuOnpu{りおれうす}
-%となり、うっとおしい。
-
-%なお、変なところに括弧を入れると、意図しない動作になる。
-%やってみると、
-%\BadExample{りおれうす}
-%となる。
-
-%たとえば、「りおれうす」をこのコマンドに入れると、り♪お♪れ♪う♪す♪となり、うっとおしい。
-%なお、変なところに括弧を入れると、意図しない動作になる。やってみると、りおれうす♪となる。
-
-%\def\emph#1is#2.{\textbf{#1}is\textit{#2}.}
-
-
-
-
-
-\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{4} 
+\setcounter{tocdepth}{3}
 
 \captionsetup[table]{labelsep=period, labelfont=bf, justification=raggedright, singlelinecheck=off}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{3pt}{}
+\titlespacing{\paragraph}{0pt}{1.5ex plus 1ex minus .2ex}{0em}
+
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{3pt}{}
+\titlespacing{\subparagraph}{0pt}{1.5ex plus 1ex minus .2ex}{0em}
+
+\newcommand{\SECTION}[1]{\section{#1}\input{section/#1/_}}
+\newcommand{\SUBSECTION}[2]{\subsection{#2}\input{section/#1/#2}}
+\newcommand{\SUBSUBSECTION}[2]{\subsubsection{#2}\input{section/#1/#2}}
