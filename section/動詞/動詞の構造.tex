@@ -1,35 +1,21 @@
-\langname の動詞はスロットⅠ～スロットⅣまでの4つの部分からなる。
-それぞれの要素には以下の要素が含まれる。
+動詞はスロットⅠ～スロットⅣまでの4つの部分からなる。
+それぞれの要素には以下の表\ref{tab:verb_phrase}に示される要素が含まれる。
 また、動詞語根は語の内部の位置によって動詞Ⅰ～動詞Ⅲの3種類に分類される。
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{ll}
+    \begin{tabular}{l|llll|l}
         \toprule
-        位置 & 要素 \\
+        & スロットⅠ & スロットⅡ & スロットⅢ & スロットⅣ \\
         \midrule
-        スロットⅠ & 動詞Ⅰ \\
-        スロットⅡ & 人称接辞 \\
-        スロットⅢ & 動詞Ⅱ \\
-        & 使役 \\
-        & 可能 \\
-        スロットⅣ & 動詞Ⅲ \\
-        & 時制/相 \\
+        \multirow{5}{*}{例} 
+        & 動詞Ⅰ & 人称接辞 & 動詞Ⅱ & 動詞Ⅲ/時制/相 & \\
+        & no（見る） & me（一人称） & & & no-me（私は見る） \\
+        & vo（食べる） & ne（二人称）& he（与える）& & vo-ne-he（あなたは食べさせる）\\ 
+        & & e（三人称）& vei（持つ）& adai（歩く）& e-vei-adai（彼は持ち歩く）\\
+        & nou（狩る）& e & & nai（開始）& nou-e-nai（彼は狩りに行く）\\
         \bottomrule
     \end{tabular}
-    \caption{\centering 動詞句の構造}
-    \label{tab:verb_section}
+    \caption{\centering 動詞の構造}
+    \label{tab:verb_phrase}
 \end{table}
-
-それぞれの位置すべてに要素が入ることも可能であるが、必ずしもすべての位置に要素が入っている必要はない。
-
-\begin{exe}
-    \ex \gll vo-e-he-ra \\
-    食べる-三人称-使役-現在 \\
-    \glt 彼は食べさせている \\
-\end{exe}
-\begin{exe}
-    \ex \gll me-vei \\
-    一人称-持つ \\
-    \glt 私は持つ \\
-\end{exe}
